@@ -11,14 +11,14 @@ logger = logging.getLogger(__name__)
 
 @almanak_strategy(
     name="liquidation_fragility_usd1",
-    description="BSC USD1 liquidation-fragility swing strategy with TP ladder and stop loss",
+    description="Polygon USD1 liquidation-fragility swing strategy with TP ladder and stop loss",
     version="1.0.0",
     author="Almanak",
-    tags=["liquidation", "fragility", "bsc", "pancakeswap", "swap"],
-    supported_chains=["bsc"],
+    tags=["liquidation", "fragility", "polygon", "pancakeswap", "swap"],
+    supported_chains=["polygon"],
     supported_protocols=["pancakeswap_v3"],
     intent_types=["SWAP", "HOLD"],
-    default_chain="bsc",
+    default_chain="polygon",
 )
 class LiquidationFragilityUsd1Strategy(IntentStrategy):
     def __init__(self, *args, **kwargs):

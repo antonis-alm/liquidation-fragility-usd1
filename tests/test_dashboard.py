@@ -22,7 +22,7 @@ def _mock_columns(spec):
 
 def test_render_custom_dashboard_import_and_runs():
     strategy_config = {
-        "chain": "bsc",
+        "chain": "polygon",
         "protocol": "pancakeswap_v3",
         "tokens": {
             "base": {"symbol": "USD1"},

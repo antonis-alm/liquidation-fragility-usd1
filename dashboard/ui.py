@@ -13,7 +13,7 @@ def render_custom_dashboard(
 ) -> None:
     st.title("Liquidation Fragility USD1 Dashboard")
 
-    chain = strategy_config.get("chain", "bsc")
+    chain = strategy_config.get("chain", "polygon")
     protocol = strategy_config.get("protocol", "pancakeswap_v3")
     tokens = strategy_config.get("tokens", {})
     base_symbol = tokens.get("base", {}).get("symbol", "USD1") if isinstance(tokens, dict) else "USD1"

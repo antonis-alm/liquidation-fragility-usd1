@@ -1,5 +1,5 @@
 {
-  "chain": "bsc",
+  "chain": "polygon",
   "protocol": "pancakeswap_v3",
   "intent_type": "SWAP",
   "signal_active": true,

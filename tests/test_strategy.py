@@ -9,7 +9,7 @@ from strategy import LiquidationFragilityUsd1Strategy
 
 def make_config() -> dict:
     return {
-        "chain": "bsc",
+        "chain": "polygon",
         "protocol": "pancakeswap_v3",
         "signal_active": True,
         "tokens": {
@@ -44,7 +44,7 @@ def make_strategy(config: dict | None = None) -> LiquidationFragilityUsd1Strateg
     cfg = config or make_config()
     return LiquidationFragilityUsd1Strategy(
         config=cfg,
-        chain="bsc",
+        chain="polygon",
         wallet_address="0x" + "1" * 40,
     )
 
@@ -56,7 +56,7 @@ def make_market(
     base_usd: Decimal = Decimal("0"),
     price: Decimal = Decimal("1"),
 ) -> MarketSnapshot:
-    market = MarketSnapshot(chain="bsc", wallet_address="0x" + "1" * 40)
+    market = MarketSnapshot(chain="polygon", wallet_address="0x" + "1" * 40)
     market.set_balance(
         "USDT",
         TokenBalance(symbol="USDT", balance=quote_usd, balance_usd=quote_usd),
