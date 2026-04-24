@@ -1,0 +1,5 @@
+{
+  "display_name": "Liquidation Fragility USD1",
+  "description": "Monitors USD1/USDT fragility swing state, risk limits, and execution events on PancakeSwap V3 (BSC)",
+  "icon": "🛡️"
+}

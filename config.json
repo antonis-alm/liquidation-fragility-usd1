@@ -1,0 +1,57 @@
+{
+  "chain": "bsc",
+  "protocol": "pancakeswap_v3",
+  "intent_type": "SWAP",
+  "signal_active": true,
+  "dust_threshold_usd": 5,
+  "tokens": {
+    "base": {
+      "symbol": "USD1",
+      "address": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d"
+    },
+    "quote": {
+      "symbol": "USDT",
+      "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+  },
+  "sizing": {
+    "portfolioPct": 0.02,
+    "maxPositionUsd": 2000,
+    "minPositionUsd": 25
+  },
+  "risk": {
+    "stopLossPct": -0.1,
+    "maxExposurePct": 0.02,
+    "maxSlippageBps": 50
+  },
+  "exit": {
+    "takeProfitPcts": [
+      0.1,
+      0.2
+    ],
+    "takeProfitFractions": [
+      0.5,
+      0.5
+    ],
+    "timeHorizonHours": 72
+  },
+  "token_funding": [
+    {
+      "symbol": "USD1",
+      "address": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
+      "amount": "1111",
+      "amount_type": "usd"
+    },
+    {
+      "symbol": "USDT",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "amount": "1111",
+      "amount_type": "usd"
+    }
+  ],
+  "anvil_funding": {
+    "BNB": 10,
+    "USDT": 10000,
+    "USD1": 10000
+  }
+}

@@ -1,0 +1,52 @@
+Downloading cpython-3.12.13-linux-x86_64-gnu (download) (32.9MiB)
+ Downloaded cpython-3.12.13-linux-x86_64-gnu (download)
+Using CPython 3.12.13
+Creating virtual environment at: .venv
+Downloading pydeck (10.8MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading pandas (10.4MiB)
+Downloading plotly (9.4MiB)
+Downloading matplotlib (8.4MiB)
+Downloading fonttools (4.8MiB)
+Downloading asyncpg (3.4MiB)
+Downloading sqlalchemy (3.2MiB)
+Downloading pycryptodome (2.2MiB)
+Downloading aiohttp (1.7MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading solders (12.2MiB)
+Downloading pyright (6.1MiB)
+Downloading grpcio-tools (2.5MiB)
+Downloading streamlit (8.6MiB)
+Downloading grpcio (6.5MiB)
+Downloading numpy (15.9MiB)
+Downloading pillow (6.8MiB)
+Downloading web3 (1.3MiB)
+Downloading pyarrow (46.6MiB)
+Downloading cytoolz (2.7MiB)
+Downloading almanak (44.5MiB)
+ Downloaded kiwisolver
+ Downloaded aiohttp
+ Downloaded pydantic-core
+ Downloaded web3
+ Downloaded pycryptodome
+ Downloaded grpcio-tools
+ Downloaded cytoolz
+ Downloaded sqlalchemy
+ Downloaded asyncpg
+ Downloaded fonttools
+ Downloaded pyright
+ Downloaded grpcio
+ Downloaded pillow
+ Downloaded matplotlib
+ Downloaded streamlit
+ Downloaded plotly
+ Downloaded pydeck
+ Downloaded pandas
+ Downloaded solders
+ Downloaded numpy
+ Downloaded pyarrow
+ Downloaded almanak
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 113 packages in 26.13s

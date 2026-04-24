@@ -1,0 +1,123 @@
+Using config: config.json
+Loaded environment from: .env
+Using interval from pyproject.toml: 60s
+Starting managed gateway on 127.0.0.1:50051 (network=anvil, anvil chains: bsc)...
+2026-04-24T09:36:38.152808Z [info     ] No API key configured -- using free public RPC for bsc (rate limits may apply) [almanak.gateway.utils.rpc_provider]
+2026-04-24T09:36:38.202226Z [info     ] Starting Anvil fork: chain=bsc, port=25393, fork_block=latest [almanak.framework.anvil.fork_manager]
+2026-04-24T09:36:39.251217Z [info     ] Anvil fork started: port=25393, block=94381065, chain_id=56 [almanak.framework.anvil.fork_manager]
+2026-04-24T09:36:39.251468Z [info     ] Anvil fork started for bsc on port 25393 (fork: https://bsc-rpc.publicnode.com) [almanak.gateway.managed]
+2026-04-24T09:36:39.251566Z [warning  ] No wallet address or ALMANAK_PRIVATE_KEY set -- skipping Anvil funding [almanak.gateway.managed]
+2026-04-24T09:36:39.251826Z [warning  ] INSECURE MODE: Auth interceptor disabled. This is acceptable for local development on 'anvil'. [almanak.gateway.server]
+2026-04-24T09:36:39.255758Z [info     ] TimelineStore initialized (backend=SQLite (/home/bun/.config/almanak/gateway.db)) [almanak.gateway.timeline.store]
+2026-04-24T09:36:39.257350Z [info     ] InstanceRegistry initialized (db_path=/home/bun/.config/almanak/gateway.db) [almanak.gateway.registry.store]
+2026-04-24T09:36:39.258278Z [info     ] SQLiteLifecycleStore initialized: /home/bun/.config/almanak/gateway.db [almanak.gateway.lifecycle.sqlite_store]
+2026-04-24T09:36:39.258377Z [info     ] No CoinGecko API key -- using on-chain pricing (Chainlink oracles) with free CoinGecko as fallback. Set COINGECKO_API_KEY for CoinGecko as primary source. [almanak.gateway.server]
+2026-04-24T09:36:39.259829Z [warning  ] token_registry_address_collision chain=avalanche address=0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab kept_symbol=WETH dropped_symbol=WETH.E reason=first-write-wins [almanak.framework.data.tokens.resolver]
+2026-04-24T09:36:39.260115Z [warning  ] token_registry_address_collision chain=xlayer address=0x779ded0c9e1022225f8e0630b35a9b54be713736 kept_symbol=USDT dropped_symbol=USDT0 reason=first-write-wins [almanak.framework.data.tokens.resolver]
+2026-04-24T09:36:39.288365Z [warning  ] pendle_registry_address_collision chain=arbitrum address=0x71fbf40651e9d4278a74586afc99f307f369ce9a kept_symbol=PT-WSTETH dropped_pendle_symbol=PT-WSTETH-25JUN2026 [almanak.framework.data.tokens.resolver]
+2026-04-24T09:36:39.288530Z [warning  ] pendle_registry_address_collision chain=arbitrum address=0x25bda1edd6af17c61399aa0eb84b93daa3069764 kept_symbol=YT-WSTETH-25JUN2026 dropped_pendle_symbol=YT-WSTETH-25JUN2026 [almanak.framework.data.tokens.resolver]
+2026-04-24T09:36:39.290788Z [info     ] Gateway gRPC server started on 127.0.0.1:50051 [almanak.gateway.server]
+2026-04-24T09:36:39.292267Z [info     ] Initialized CoinGeckoPriceSource [almanak.gateway.data.price.coingecko]
+2026-04-24T09:36:39.296550Z [info     ] Initialized BinancePriceSource (cache_ttl=30s) [almanak.gateway.data.price.binance]
+2026-04-24T09:36:39.296652Z [info     ] MarketService: 4-source EVM pricing (Chainlink + Binance + DexScreener + CoinGecko), chain=bsc [almanak.gateway.services.market_service]
+2026-04-24T09:36:39.296737Z [info     ] Initialized PriceAggregator    [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:39.551221Z [info     ] Aggregated price for ETH/USD: 2310.04 (confidence: 1.00, sources: 4/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:39.551437Z [info     ] Price cache pre-warmed (ETH/USD fetched) [almanak.gateway.services.market_service]
+2026-04-24T09:36:39.551609Z [warning  ] Cannot pre-warm bsc: no private key configured [almanak.gateway.server]
+2026-04-24T09:36:39.551775Z [info     ] Gateway marked SERVING (warmup complete) [almanak.gateway.server]
+2026-04-24T09:36:39.581589Z [info     ] Managed gateway started on 127.0.0.1:50051 [almanak.gateway.managed]
+Managed gateway started on 127.0.0.1:50051
+Waiting for gateway to become ready...
+2026-04-24T09:36:39.602739Z [info     ] Gateway channel configured for on-chain token discovery [almanak.framework.data.tokens.resolver]
+
+Loaded strategy: LiquidationFragilityUsd1Strategy
+Loaded config from: config.json
+Network: ANVIL (local fork at http://127.0.0.1:25393)
+No ALMANAK_PRIVATE_KEY set. Using default Anvil wallet: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+(non-interactive, accepting default Anvil wallet)
+============================================================
+ALMANAK STRATEGY RUNNER
+============================================================
+Strategy: LiquidationFragilityUsd1Strategy
+Deployment ID: LiquidationFragilityUsd1Strategy:11f4684b4718
+Run ID: b708a729dbe0
+Mode: FRESH START (no existing state)
+Chain: bsc
+Wallet: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+Execution: Single run
+Dry run: False
+Gateway: localhost:50051
+============================================================
+Strategy class loaded: LiquidationFragilityUsd1Strategy
+  Config wrapped in DictConfigWrapper
+2026-04-24T09:36:39.614800Z [info     ] Initialized IntentStrategy on bsc with wallet 0xf39Fd6e5... [almanak.framework.strategies.intent_strategy]
+Strategy instance created successfully
+Initializing components...
+  Using gateway-backed providers...
+  Gateway-backed providers created
+2026-04-24T09:36:39.619448Z [info     ] Initialized GatewayOHLCVProvider with cache TTLs: live=10.0s, historical=60.0s [almanak.framework.data.ohlcv.gateway_provider]
+2026-04-24T09:36:39.619601Z [info     ] RoutingOHLCVProvider initialised chain=bsc pool_address=(auto) [almanak.framework.data.ohlcv.routing_provider]
+  Providers injected into strategy (RSI + full indicator suite incl. ADX/OBV/CCI/Ichimoku)
+2026-04-24T09:36:39.619899Z [info     ] RateMonitor initialized for chain=bsc, protocols=[], cache_ttl=12.0s [almanak.framework.data.rates.monitor]
+2026-04-24T09:36:39.619977Z [info     ] GatewayFundingRateProvider initialized (chain=bsc, cache_ttl=10.0) [almanak.framework.data.funding.gateway_provider]
+  Injected strategy data services: price, balance, indicators, lending_rates, funding_rates
+  Using gateway-backed state manager
+2026-04-24T09:36:39.625411Z [info     ] CircuitBreaker initialized for strategy=LiquidationFragilityUsd1Strategy:11f4684b4718, config={'max_consecutive_failures': 3, 'max_cumulative_loss_usd': '5000', 'cooldown_seconds': 3600, 'half_open_success_threshold': 2, 'volatility_threshold_pct': 0.1, 'loss_tracking_window_hours': 24} [almanak.framework.execution.circuit_breaker]
+2026-04-24T09:36:39.625569Z [info     ] StrategyRunner initialized (single-chain mode) with config: interval=60s, dry_run=False, session_store=disabled [almanak.framework.runner.strategy_runner]
+Components initialized successfully
+
+Running single iteration...
+
+2026-04-24T09:36:39.641167Z [info     ] Registered strategy instance: LiquidationFragilityUsd1Strategy:11f4684b4718 (LiquidationFragilityUsd1Strategy) [almanak.gateway.registry.store]
+2026-04-24T09:36:39.641819Z [info     ] Registered strategy instance with gateway: LiquidationFragilityUsd1Strategy:11f4684b4718 [almanak.framework.runner.strategy_runner]
+2026-04-24T09:36:39.642622Z [info     ] HOT tier (in-memory cache) initialized [almanak.framework.state.state_manager]
+2026-04-24T09:36:39.648077Z [info     ] SQLite store initialized: ./almanak_state.db (WAL: True) [almanak.framework.state.backends.sqlite]
+2026-04-24T09:36:39.648157Z [info     ] WARM tier (SQLite) initialized: ./almanak_state.db [almanak.framework.state.state_manager]
+  No previous state found (fresh start)
+2026-04-24T09:36:39.649192Z [info     ] Starting iteration for strategy: LiquidationFragilityUsd1Strategy:11f4684b4718 [almanak.framework.runner.strategy_runner] correlation_id=LiquidationFragilityUsd1Strategy:11f4684b4718_1_1777023399 cycle_id=f309a0da-b127-44d5-926e-57aa13018e66 strategy_id=LiquidationFragilityUsd1Strategy:11f4684b4718
+2026-04-24T09:36:39.857689Z [info     ] Aggregated price for USDC/USD: 1.0 (confidence: 0.95, sources: 3/4, outliers: 1) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:40.091448Z [info     ] Aggregated price for WETH/USD: 2310.04 (confidence: 1.00, sources: 4/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:40.095799Z [info     ] Recorded timeline event: STATE_CHANGE for LiquidationFragilityUsd1Strategy:11f4684b4718 [almanak.gateway.services.observe_service]
+2026-04-24T09:36:40.099386Z [info     ] Initialized Web3BalanceProvider [almanak.gateway.data.balance.web3_provider]
+2026-04-24T09:36:40.160307Z [warning  ] Rate limited by CoinGecko for USDT/USD, backoff: 1.00s [almanak.gateway.data.price.coingecko]
+2026-04-24T09:36:40.265630Z [info     ] Aggregated price for USDT/USD: 1.0 (confidence: 0.85, sources: 2/4, outliers: 1) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:40.267891Z [info     ] Rate limit backoff: waiting 0.95s before request for USDT/USD [almanak.gateway.data.price.coingecko]
+2026-04-24T09:36:41.231799Z [warning  ] Rate limited by CoinGecko for USDT/USD, backoff: 2.00s [almanak.gateway.data.price.coingecko]
+2026-04-24T09:36:41.232111Z [info     ] Aggregated price for USDT/USD: 1.0 (confidence: 0.85, sources: 2/4, outliers: 1) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:41.361518Z [info     ] Rate limit backoff: waiting 2.31s before request for 0X8D0D000EE44948FC98C9B98A4FA4921476F08B0D/USD [almanak.gateway.data.price.coingecko]
+2026-04-24T09:36:43.676910Z [info     ] Aggregated price for 0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d/USD: 0.9997 (confidence: 0.70, sources: 1/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:43.680050Z [info     ] Initialized OnChainLookup      [almanak.gateway.services.onchain_lookup]
+2026-04-24T09:36:43.892910Z [info     ] Aggregated price for 0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d/USD: 0.999732 (confidence: 0.80, sources: 2/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:43.917078Z [info     ] Aggregated price for 0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d/USD: 0.999732 (confidence: 0.80, sources: 2/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:43.920198Z [info     ] Recorded timeline event: STATE_CHANGE for LiquidationFragilityUsd1Strategy:11f4684b4718 [almanak.gateway.services.observe_service]
+2026-04-24T09:36:43.920731Z [info     ] ⏸️ LiquidationFragilityUsd1Strategy:11f4684b4718 HOLD: target size below minimum position [almanak.framework.runner.strategy_runner] correlation_id=LiquidationFragilityUsd1Strategy:11f4684b4718_1_1777023399 cycle_id=f309a0da-b127-44d5-926e-57aa13018e66 strategy_id=LiquidationFragilityUsd1Strategy:11f4684b4718
+2026-04-24T09:36:44.033243Z [info     ] Aggregated price for USDC/USD: 1.0 (confidence: 0.95, sources: 3/4, outliers: 1) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:44.035254Z [info     ] Aggregated price for USDC/USD: 1.0 (confidence: 0.95, sources: 3/4, outliers: 1) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:44.037664Z [info     ] Aggregated price for USDC/USD: 1.0 (confidence: 0.95, sources: 3/4, outliers: 1) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:44.089382Z [info     ] Aggregated price for WETH/USD: 2310.04 (confidence: 1.00, sources: 4/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:44.092446Z [info     ] Aggregated price for WETH/USD: 2310.04 (confidence: 1.00, sources: 4/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:44.095001Z [info     ] Aggregated price for WETH/USD: 2310.04 (confidence: 1.00, sources: 4/4, outliers: 0) [almanak.gateway.data.price.aggregator]
+2026-04-24T09:36:44.096548Z [info     ] Initialized binance integration [almanak.gateway.integrations.base]
+2026-04-24T09:36:44.096685Z [info     ] Initialized coingecko integration [almanak.gateway.integrations.base]
+2026-04-24T09:36:44.096750Z [info     ] Initialized CoinGecko integration (tier: free) [almanak.gateway.integrations.coingecko]
+2026-04-24T09:36:44.096819Z [info     ] Initialized thegraph integration [almanak.gateway.integrations.base]
+2026-04-24T09:36:44.096872Z [info     ] Initialized TheGraph integration with 13 allowed subgraphs [almanak.gateway.integrations.thegraph]
+2026-04-24T09:36:44.097003Z [info     ] Initialized zerion integration [almanak.gateway.integrations.base]
+2026-04-24T09:36:44.098768Z [info     ] Portfolio baseline established for LiquidationFragilityUsd1Strategy:11f4684b4718: $0.00 [almanak.framework.runner.strategy_runner]
+2026-04-24T09:36:44.112560Z [info     ] iteration_summary              [almanak.framework.runner.strategy_runner]
+2026-04-24T09:36:44.113917Z [info     ] Updated status for LiquidationFragilityUsd1Strategy:11f4684b4718: INACTIVE (Strategy runner stopped) [almanak.gateway.registry.store]
+2026-04-24T09:36:44.114532Z [info     ] Disconnected from gateway      [almanak.framework.gateway_client]
+2026-04-24T09:36:44.205280Z [info     ] Gateway gRPC server stopped    [almanak.gateway.server]
+2026-04-24T09:36:44.207574Z [info     ] Closed Web3BalanceProvider     [almanak.gateway.data.balance.web3_provider]
+2026-04-24T09:36:44.207749Z [info     ] Closed OnChainLookup           [almanak.gateway.services.onchain_lookup]
+2026-04-24T09:36:44.207896Z [info     ] FundingRateService closed      [almanak.gateway.services.funding_rate_service]
+2026-04-24T09:36:44.208044Z [info     ] TokenService closed            [almanak.gateway.services.token_service]
+2026-04-24T09:36:44.461461Z [info     ] Anvil fork stopped             [almanak.framework.anvil.fork_manager]
+2026-04-24T09:36:44.461673Z [info     ] Anvil fork stopped for bsc     [almanak.gateway.managed]
+2026-04-24T09:36:44.462167Z [info     ] Managed gateway stopped        [almanak.gateway.managed]
+Status: HOLD | Intent: HOLD | Duration: 4272ms
+
+Iteration completed successfully.
+2026-04-24T09:36:44.464055Z [info     ] Managed gateway stopped        [almanak.gateway.managed]
+2026-04-24T09:36:44.589018Z [error    ] Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7fd3ab9a4bc0> [asyncio]

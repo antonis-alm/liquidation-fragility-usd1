@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tmp/workspaces/d7b2c5d2-2e02-40fa-8c8f-642b06609578
+configfile: pyproject.toml
+plugins: anyio-4.13.0
+collecting ... collected 9 items
+
+tests/test_strategy.py::test_entry_swap_uses_pancakeswap_v3_and_spec_address PASSED [ 11%]
+tests/test_strategy.py::test_entry_hold_when_target_below_min_position PASSED [ 22%]
+tests/test_strategy.py::test_stop_loss_exits_all PASSED                  [ 33%]
+tests/test_strategy.py::test_take_profit_1_sells_partial PASSED          [ 44%]
+tests/test_strategy.py::test_take_profit_2_exits_all PASSED              [ 55%]
+tests/test_strategy.py::test_time_horizon_exit_after_72h PASSED          [ 66%]
+tests/test_strategy.py::test_state_self_heal_when_onchain_balance_missing PASSED [ 77%]
+tests/test_strategy.py::test_persistence_round_trip PASSED               [ 88%]
+tests/test_strategy.py::test_teardown_methods_for_open_position PASSED   [100%]
+
+=============================== warnings summary ===============================
+../../../usr/local/lib/python3.13/dist-packages/websockets/legacy/__init__.py:6
+  /usr/local/lib/python3.13/dist-packages/websockets/legacy/__init__.py:6: DeprecationWarning: websockets.legacy is deprecated; see https://websockets.readthedocs.io/en/stable/howto/upgrade.html for upgrade instructions
+    warnings.warn(  # deprecated in 14.0 - 2024-11-09
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 9 passed, 1 warning in 4.18s =========================

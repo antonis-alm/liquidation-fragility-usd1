@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.0.3, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /tmp/workspaces/d7b2c5d2-2e02-40fa-8c8f-642b06609578
+configfile: pyproject.toml
+plugins: anyio-4.13.0
+collecting ... collected 3 items
+
+tests/test_dashboard.py::test_render_custom_dashboard_import_and_runs PASSED [ 33%]
+tests/test_dashboard.py::test_render_risk_parameters_constructs_metrics PASSED [ 66%]
+tests/test_dashboard.py::test_recent_events_handles_api_failure PASSED   [100%]
+
+=============================== warnings summary ===============================
+tests/test_dashboard.py::test_render_custom_dashboard_import_and_runs
+  /usr/local/lib/python3.13/dist-packages/websockets/legacy/__init__.py:6: DeprecationWarning: websockets.legacy is deprecated; see https://websockets.readthedocs.io/en/stable/howto/upgrade.html for upgrade instructions
+    warnings.warn(  # deprecated in 14.0 - 2024-11-09
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 3 passed, 1 warning in 5.68s =========================
