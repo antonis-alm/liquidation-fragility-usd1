@@ -7,7 +7,7 @@
   "tokens": {
     "base": {
       "symbol": "POL",
-      "address": "0x8Be3a9F68FbC6c5973e49C0415dFf63b75B82DB3"
+      "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
     },
     "quote": {
       "symbol": "USDC",
@@ -38,7 +38,7 @@
   "token_funding": [
     {
       "symbol": "POL",
-      "address": "0x8Be3a9F68FbC6c5973e49C0415dFf63b75B82DB3",
+      "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
       "amount": "1",
       "amount_type": "usd"
     },
