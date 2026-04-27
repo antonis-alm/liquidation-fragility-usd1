@@ -37,21 +37,20 @@
   },
   "token_funding": [
     {
-      "symbol": "USD1",
-      "address": "0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d",
-      "amount": "1111",
+      "symbol": "POL",
+      "address": "0x8Be3a9F68FbC6c5973e49C0415dFf63b75B82DB3",
+      "amount": "1",
       "amount_type": "usd"
     },
     {
-      "symbol": "USDT",
-      "address": "0x55d398326f99059ff775485246999027b3197955",
-      "amount": "1111",
+      "symbol": "USDC",
+      "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+      "amount": "1",
       "amount_type": "usd"
     }
   ],
   "anvil_funding": {
-    "BNB": 10,
-    "USDT": 10000,
-    "USD1": 10000
+    "POL": 1000000,
+    "USDC": 10000
   }
 }
