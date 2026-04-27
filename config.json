@@ -1,56 +1,51 @@
 {
-  "chain": "polygon",
-  "protocol": "uniswap_v3",
-  "intent_type": "SWAP",
-  "signal_active": true,
-  "dust_threshold_usd": 5,
-  "tokens": {
-    "base": {
-      "symbol": "POL",
-      "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6"
-    },
-    "quote": {
-      "symbol": "USDC",
-      "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
-    }
-  },
-  "sizing": {
-    "portfolioPct": 0.02,
-    "maxPositionUsd": 2000,
-    "minPositionUsd": 25
-  },
-  "risk": {
-    "stopLossPct": -0.1,
-    "maxExposurePct": 0.02,
-    "maxSlippageBps": 50
-  },
-  "exit": {
-    "takeProfitPcts": [
-      0.1,
-      0.2
+    "chain": "polygon",
+    "data_granularity": "1m",
+    "base_token": "MATIC",
+    "quote_token": "USDC",
+    "protocol": "uniswap_v3",
+    "primary_timeframe": "1m",
+    "fallback_timeframe": "5m",
+    "rsi_period": 14,
+    "rsi_entry_min": 52,
+    "rsi_entry_max": 68,
+    "ema_fast_period": 9,
+    "ema_slow_period": 21,
+    "atr_period": 14,
+    "noise_atr_percent_threshold": "0.012",
+    "pullback_min_bps": 20,
+    "initial_capital_usd": 19,
+    "reserve_usdc": "3",
+    "sizing_fraction": "0.70",
+    "min_trade_usd": "4",
+    "max_trade_usd": "12",
+    "dex_fee_bps": 30,
+    "expected_slippage_bps_entry": 20,
+    "expected_slippage_bps_exit": 20,
+    "safety_buffer_usd": "0.15",
+    "max_roundtrip_cost_ratio": "0.06",
+    "max_gas_ratio": "0.03",
+    "max_affordable_tp_bps": 600,
+    "min_net_tp_usd": "0.20",
+    "hard_stop_net_usd": "0.45",
+    "max_hold_minutes": 30,
+    "cooldown_minutes": 4,
+    "max_consecutive_losses": 3,
+    "loss_pause_minutes": 20,
+    "entry_max_slippage_bps": 50,
+    "exit_max_slippage_bps": 70,
+    "hard_stop_slippage_bps": 100,
+    "token_funding": [
+        {
+            "symbol": "USDC",
+            "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+            "amount": "19",
+            "amount_type": "usd"
+        }
     ],
-    "takeProfitFractions": [
-      0.5,
-      0.5
-    ],
-    "timeHorizonHours": 72
-  },
-  "token_funding": [
-    {
-      "symbol": "POL",
-      "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
-      "amount": "1",
-      "amount_type": "usd"
-    },
-    {
-      "symbol": "USDC",
-      "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
-      "amount": "1",
-      "amount_type": "usd"
+    "anvil_funding": {
+        "MATIC": 2,
+        "POL": 0,
+        "USDC": 100
     }
-  ],
-  "anvil_funding": {
-    "POL": 1000000,
-    "USDC": 10000
-  }
 }
