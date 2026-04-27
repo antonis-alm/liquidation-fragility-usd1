@@ -1,12 +1,12 @@
-# LiquidationFragilityUsd1Strategy - Agent Guide
+# PolygonPolUsdcHfMomentumStrategy - Agent Guide
 
-> AI coding agent context for the `liquidation_fragility_usd1` strategy.
+> AI coding agent context for the `polygon_pol_usdc_hf_momentum` strategy.
 
 ## Overview
 
 - **Template:** ta_swap
-- **Chain:** bsc
-- **Class:** `LiquidationFragilityUsd1Strategy` in `strategy.py`
+- **Chain:** polygon
+- **Class:** `PolygonPolUsdcHfMomentumStrategy` in `strategy.py`
 - **Config:** `config.json`
 
 This is a self-contained Python project with its own `pyproject.toml`, `.venv/`, and `uv.lock`.
