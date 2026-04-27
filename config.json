@@ -1,6 +1,6 @@
 {
   "chain": "polygon",
-  "protocol": "pancakeswap_v3",
+  "protocol": "uniswap_v3",
   "intent_type": "SWAP",
   "signal_active": true,
   "dust_threshold_usd": 5,
